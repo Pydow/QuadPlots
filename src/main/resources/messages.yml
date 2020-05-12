@@ -1,0 +1,93 @@
+prefix: "§6Quad§fPlots §8> §r"
+
+# Error Messages
+not-on-a-plot: "§cDu stehst gerade auf keinem Plot."
+no-permission: "§cKeine Berechtigung"
+player-not-found: "§cDer angegebene Spieler konnte nicht gefunden werden."
+not-your-plot: "§cDieses Plot gehört dir nicht."
+command-not-found: "§cEs wurde kein Subcommand mit diesem Namen gefunden. Führe /p help aus, falls du Hilfe benötigst."
+max-plots: "§cDu hast bereits die maximale Anzahl an Plots geclaimt."
+
+# /p info
+info-free: "§aDu befindest dich auf dem Plot ([0];[1]). Dieses Plot ist frei."
+info-1: "§a-- Plot von [0] --"
+info-2: "§eMitglieder:§r [0]"
+info-3: "§eHelfer:§r [0]"
+info-4: "§eVerbotene Spieler:§r [0]"
+
+# /p clear
+clearConfirm: "§eMöchtest du dieses Plot wirklich zurücksetzen? wenn ja, führe /p clear confirm aus."
+clear: "§aPlot wurde zurückgesetzt."
+
+# /p claim
+already-claimed: "§cDieses Plot gehört bereits jemanden."
+claimed: "§aDieses Plot gehört nun dir."
+
+# /p home
+id-needs-to-be-number: "§cDie ID muss eine Zahl sein."
+no-plots: "§cDu hast noch kein Plots."
+no-plots-other: "§c[0] hat noch kein Plot."
+no-plot-with-id: "§cDu hast kein Plot mit der ID [0]."
+no-plot-with-id-other: "§c[0] hat kein Plot mit der ID [1]."
+home-teleported: "§aDu wurdest zu deinem [0]. Plot teleportiert."
+home-teleported-other: "§aDu wurdest zum [0]. Plot von [1] teleportiert."
+
+# /p border
+no-plot-permission: "§cDu hast nicht genügend Berechtigungen auf diesem Plot."
+border-changed: "§aDu hast nun einen Rand aus [0]."
+
+# /p auto
+not-in-a-plot-world: "§cDu bist in keiner Plotwelt."
+searching-plot: "§eSuche ein freies Plot..."
+plot-found: "§aPlot gefunden. Du kannst es nun in Besitz nehmen mit /p claim."
+
+# /p reset
+reset-confirm: "§eMöchtest du dieses Plot wirklich freigeben und zurücksetzen? wenn ja, führe /p reset confirm aus."
+resetted: "§aDas Plot wurde komplett zurückgesetzt."
+
+# /p bypass
+bypass-on: "§aDu umgehst nun alle Beschränkungen."
+bypass-off: "§cDu umgehst nun nicht mehr alle Beschränkungen."
+
+# /p addhelper & /p removehelper
+already-helper: "§c[0] ist bereits Helfer auf deinem Plot."
+not-helper: "§c[0] ist kein Helfer auf deinem Plot."
+helper-added: "§aDu hast [0] erfolgreich zu einem Helfer auf deinem Plot gemacht."
+helper-removed: "§aDu hast [0] erfolgreich als Helfer auf deinem Plot entfernt."
+
+# /p addmember & /p removemember
+already-member: "§c[0] ist bereits Mitglied auf deinem Plot."
+not-member: "§c[0] ist kein Mitglied auf deinem Plot."
+member-added: "§aDu hast [0] erfolgreich zu einem Mitglied auf deinem Plot gemacht."
+member-removed: "§aDu hast [0] erfolgreich als Mitglied auf deinem Plot entfernt."
+
+# /p deny & /p undeny
+already-denied: "§c[0] hat bereits Hausverbot. §7(Scheint ja ein wirklich böser Spieler zu sein :o)"
+not-denied: "§c[0] hat kein Hausverbot auf deinem Plot."
+deny-added: "§a[0] hat nun Hausverbot auf deinem Plot."
+deny-removed: "§a[0] darf wieder auf dein Plot."
+
+# /p help
+help-title: "Alles über die Plots"
+help-content: "Du brauchst noch Hilfe bei den Plots? Perfekt, hier findest du alles was du über Plots wissen musst."
+
+help-getting-started: "Grundlegende Dinge"
+help-getting-started-content: "§lDas erste mal in der Plotwelt:§r\n\nDu bist zum ersten mal in der Plotwelt und frägst dich wie man hier anfängt? \nAlso. Zuerst einmal solltest du dir ein eigenes Plot holen. Dies machst du indem du den Command §e/p claim §rausführst. Stelle dich dabei einfach in das Plot was du haben möchtest. Falls du kein freies Plot findest kannst du eins automatisch mit §e/p auto §fsuchen.\n\n§lWie geht es weiter?§r\n\nAls nächstes kannst du dein Plot nach deinem belieben bebauen. Baue eine Haus, einen Shop oder einen Palast. Du kannst frei darüber entscheiden was du bauen möchtest.\n\n§lWie erhalte ich Informationen über ein Plot?§r\n\nDu kannst Informationen über ein Plot erhalten indem du §e/p info §rausführst."
+
+help-teleport: "Plot Teleportation"
+help-teleport-content: "§lWie komme ich zurück zu meinem Plot?§r\n\nGanz einfach. Führe dazu den Befehl §e/p h §raus. \nFalls du zum Beispiel zu deinem 2. Plot möchtest führe §e/p h <nummer> §raus.\n\n§lWie komme ich zu den Plot eines anderen Spielers?§r\n\nDu kannst das Plot eines Spielers besuchen indem du §e/p h <nummer> <spieler> §rausführst."
+
+help-clear-reset: "Plot zurücksetzten und freigeben"
+help-clear-reset-content: "§lWie kann ich mein Plot zurücksetzen?§r\n\nDu kannst dein Plot zurücksetzen, indem du §e/p clear §rausführst.\n\n§lWie kann ich mein Plot zurücksetzen und freigeben?§r\n\nDu kannst dein Plot zurücksetzen und freigeben indem du §e/p reset §fausführst."
+
+help-deny: "Spielern Hausverbot geben"
+help-deny-content: "§lDu möchtest einem Spieler Hausverbot auf deinem Plot erteilen?§r\n\nFühre dazu §e/p deny <spielername> §faus. Dannach kann der Spieler dein Plot nicht mehr betreten.\n\n§lWie kann das Hausverbot aufheben?§r\n\nFühre §e/plot undeny <spielername> §raus um das Hausverbot eines Spielers aufzuheben."
+
+help-helpers-members: "Helfer und Mitglieder"
+help-helpers-members-content: "§lHelfer:§r\n\nHelfer sind Spieler die dir beim bebauen deines Plots helfen können. Du kannst einen Helfer hinzufügen indem du §e/p addhelper <spielername> §rausführst.\n\n§cAchtung: §fHelfer können nur auf deinem Plot bauen/abbauen wenn du Online bist.\n\n§lMitglieder:§r\n\nMitglieder sind Spieler die teil deines Plots sind. Sie können z.b bei dir wohnen oder einfach nur aushelfen. Du kannst ein Mitglied hinzufügen indem du §e/p addmember <spielername> §fausführst.\n\n§cAchtung: §fMitglieder können §ejederzeit§f auf deinem Plot bauen/abbauen, auch wenn du gerade Offline bist.\n\n§lHelfer oder Mitglieder entfernen:§r\n\nDu kannst einen Helfer mit \n§e/p removehelper <spielername> §rentfernen.\nDu kannst ein Mitglied mit \n§e/p removemember <spielername>§r entfernen."
+
+
+
+# plot movement
+plot-entered-claimed: "§a([0];[1]) Plot von [2]"
+plot-entered-free: "§e([0];[1]) Freies Plot"
