@@ -142,9 +142,6 @@ public class QuadPlots extends PluginBase {
             return new PlotCallback(null, CallbackIDs.ON_ROAD);
         }
 
-        getLogger().info("Plot ist frei");
-        //return new PlotCallback(new Plot($X, $Z, position.getLevel()), CallbackIDs.FREE);
-        // ToDo: provider
         return provider.getPlot(position.getLevel(), $X, $Z);
     }
 

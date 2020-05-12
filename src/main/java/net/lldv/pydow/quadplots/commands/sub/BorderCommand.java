@@ -26,9 +26,9 @@ public class BorderCommand extends SubCommand {
                 boolean isBypassing = QuadPlots.instance.isBypassing(player.getName());
 
                 if (cb.plot != null) {
-                    if (cb.code == CallbackIDs.CLAIMED) {
+                    if (isBypassing || cb.code == CallbackIDs.CLAIMED) {
                         Plot plot = cb.plot;
-                        if (plot.owner.equalsIgnoreCase(player.getName()) || isBypassing) {
+                        if (isBypassing || plot.owner.equalsIgnoreCase(player.getName())) {
                             try {
                                 Identifier blockID = Identifier.fromString(args[1]);
                                 QuadPlots.instance.setPlotBorderBlocks(plot, Block.get(blockID));
