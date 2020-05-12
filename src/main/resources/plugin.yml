@@ -1,0 +1,5 @@
+name: QuadPlots
+version: 1.0.0
+api: 2.0.0
+main: net.lldv.pydow.quadplots.QuadPlots
+description: Plot Plugin
