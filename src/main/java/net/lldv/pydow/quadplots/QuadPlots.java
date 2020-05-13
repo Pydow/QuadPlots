@@ -87,6 +87,7 @@ public class QuadPlots extends PluginBase {
         SubCommandHandler.register("removemember", new RemoveMemberCommand());
         SubCommandHandler.register("reset", new ResetCommand());
         SubCommandHandler.register("undeny", new UndenyCommand());
+        SubCommandHandler.register("warp", new WarpCommand());
     }
 
     public boolean isBypassing(String player) {

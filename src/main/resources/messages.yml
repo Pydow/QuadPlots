@@ -86,7 +86,9 @@ help-deny-content: "§lDu möchtest einem Spieler Hausverbot auf deinem Plot ert
 help-helpers-members: "Helfer und Mitglieder"
 help-helpers-members-content: "§lHelfer:§r\n\nHelfer sind Spieler die dir beim bebauen deines Plots helfen können. Du kannst einen Helfer hinzufügen indem du §e/p addhelper <spielername> §rausführst.\n\n§cAchtung: §fHelfer können nur auf deinem Plot bauen/abbauen wenn du Online bist.\n\n§lMitglieder:§r\n\nMitglieder sind Spieler die teil deines Plots sind. Sie können z.b bei dir wohnen oder einfach nur aushelfen. Du kannst ein Mitglied hinzufügen indem du §e/p addmember <spielername> §fausführst.\n\n§cAchtung: §fMitglieder können §ejederzeit§f auf deinem Plot bauen/abbauen, auch wenn du gerade Offline bist.\n\n§lHelfer oder Mitglieder entfernen:§r\n\nDu kannst einen Helfer mit \n§e/p removehelper <spielername> §rentfernen.\nDu kannst ein Mitglied mit \n§e/p removemember <spielername>§r entfernen."
 
-
+# /p warp
+warp-number-error: "§cX und Z müssen eine Zahl sein."
+warped: "§aDu wurdest erfolgreich zum Plot ([0];[1]) teleportiert."
 
 # plot movement
 plot-entered-claimed: "§a([0];[1]) Plot von [2]"
