@@ -8,13 +8,13 @@ import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.registry.CommandRegistry;
 import cn.nukkit.utils.Identifier;
 import net.lldv.pydow.quadplots.commands.PlotCommand;
-import net.lldv.pydow.quadplots.commands.SubCommand;
 import net.lldv.pydow.quadplots.commands.SubCommandHandler;
 import net.lldv.pydow.quadplots.commands.sub.*;
 import net.lldv.pydow.quadplots.components.CallbackIDs;
 import net.lldv.pydow.quadplots.components.Plot;
 import net.lldv.pydow.quadplots.components.PlotCallback;
 import net.lldv.pydow.quadplots.components.generator.QuadPlotGen;
+import net.lldv.pydow.quadplots.components.managers.HelpFormManager;
 import net.lldv.pydow.quadplots.components.provider.Provider;
 import net.lldv.pydow.quadplots.components.provider.YAMLProvider;
 import net.lldv.pydow.quadplots.components.settings.Language;
@@ -22,7 +22,6 @@ import net.lldv.pydow.quadplots.components.settings.PlotSettings;
 import net.lldv.pydow.quadplots.components.tasks.PlotClearTask;
 import net.lldv.pydow.quadplots.components.tasks.SetBorderTask;
 import net.lldv.pydow.quadplots.listener.BlockListener;
-import net.lldv.pydow.quadplots.listener.FormListener;
 import net.lldv.pydow.quadplots.listener.MovementListener;
 import net.lldv.pydow.quadplots.listener.PlayerListener;
 
@@ -35,6 +34,7 @@ public class QuadPlots extends PluginBase {
     public static Identifier id = Identifier.fromString("quadplots:default");
     public static ArrayList<String> bypassPlayers = new ArrayList<>();
     public static Provider provider;
+    public static int defaultPlotLimit;
 
     @Override
     public void onLoad() {
@@ -48,15 +48,27 @@ public class QuadPlots extends PluginBase {
 
     @Override
     public void onEnable() {
+        saveDefaultConfig();
+
         registerSubCommands();
+        registerHelpPages();
 
         provider = new YAMLProvider();
         provider.init();
 
+        defaultPlotLimit = getConfig().getInt("default-plot-limit");
+
         getServer().getPluginManager().registerEvents(new MovementListener(), this);
         getServer().getPluginManager().registerEvents(new BlockListener(), this);
-        getServer().getPluginManager().registerEvents(new FormListener(), this);
         getServer().getPluginManager().registerEvents(new PlayerListener(), this);
+    }
+
+    public void registerHelpPages() {
+        HelpFormManager.addCaterogy(Language.getNoPrefix("help-getting-started"), Language.getNoPrefix("help-getting-started-content"));
+        HelpFormManager.addCaterogy(Language.getNoPrefix("help-deny"), Language.getNoPrefix("help-deny-content"));
+        HelpFormManager.addCaterogy(Language.getNoPrefix("help-clear-reset"), Language.getNoPrefix("help-clear-reset-content"));
+        HelpFormManager.addCaterogy(Language.getNoPrefix("help-teleport"), Language.getNoPrefix("help-teleport-content"));
+        HelpFormManager.addCaterogy(Language.getNoPrefix("help-helpers-members"), Language.getNoPrefix("help-helpers-members-content"));
     }
 
     public void registerSubCommands() {
@@ -105,7 +117,7 @@ public class QuadPlots extends PluginBase {
 
     public int getMaxPlotsOfPlayer(Player player) {
         if (player.isOp()) return -1;
-        int maxShops = 6;//defaultPlotLimit; ToDo: limit
+        int maxShops = defaultPlotLimit;
         for (Map.Entry<String, Boolean> perm : player.addAttachment(instance).getPermissions().entrySet()) {
             if (perm.getValue()) {
                 if (perm.getKey().contains("quadplots.claimplots.")) {
