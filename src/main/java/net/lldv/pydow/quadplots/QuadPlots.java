@@ -66,6 +66,15 @@ public class QuadPlots extends PluginBase {
         SubCommandHandler.register("bypass", new BypassCommand());
         SubCommandHandler.register("home", new HomeCommand());
         SubCommandHandler.register("claim", new ClaimCommand());
+        SubCommandHandler.register("addhelper", new AddHelperCommand());
+        SubCommandHandler.register("addmember", new AddMemberCommand());
+        SubCommandHandler.register("auto", new AutoCommand());
+        SubCommandHandler.register("deny", new DenyCommand());
+        SubCommandHandler.register("help", new HelpCommand());
+        SubCommandHandler.register("removehelper", new RemoveHelperCommand());
+        SubCommandHandler.register("removemember", new RemoveMemberCommand());
+        SubCommandHandler.register("reset", new ResetCommand());
+        SubCommandHandler.register("undeny", new UndenyCommand());
     }
 
     public boolean isBypassing(String player) {
