@@ -10,7 +10,7 @@ public class PlotSettings {
     public static Block plotFloorBlock;
     public static Block wallBlock;
     public static Block wallBlockClaimed;
-    public static String world = "QuadPlots";
+    public static String world = "world";
     public static int roadWidth = 7;
     public static int groundHeight = 64;
     public static int plotSize = 32;

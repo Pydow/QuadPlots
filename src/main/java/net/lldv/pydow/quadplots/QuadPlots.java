@@ -10,10 +10,7 @@ import cn.nukkit.utils.Identifier;
 import net.lldv.pydow.quadplots.commands.PlotCommand;
 import net.lldv.pydow.quadplots.commands.SubCommand;
 import net.lldv.pydow.quadplots.commands.SubCommandHandler;
-import net.lldv.pydow.quadplots.commands.sub.BorderCommand;
-import net.lldv.pydow.quadplots.commands.sub.BypassCommand;
-import net.lldv.pydow.quadplots.commands.sub.ClearCommand;
-import net.lldv.pydow.quadplots.commands.sub.InfoCommand;
+import net.lldv.pydow.quadplots.commands.sub.*;
 import net.lldv.pydow.quadplots.components.CallbackIDs;
 import net.lldv.pydow.quadplots.components.Plot;
 import net.lldv.pydow.quadplots.components.PlotCallback;
@@ -24,6 +21,10 @@ import net.lldv.pydow.quadplots.components.settings.Language;
 import net.lldv.pydow.quadplots.components.settings.PlotSettings;
 import net.lldv.pydow.quadplots.components.tasks.PlotClearTask;
 import net.lldv.pydow.quadplots.components.tasks.SetBorderTask;
+import net.lldv.pydow.quadplots.listener.BlockListener;
+import net.lldv.pydow.quadplots.listener.FormListener;
+import net.lldv.pydow.quadplots.listener.MovementListener;
+import net.lldv.pydow.quadplots.listener.PlayerListener;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -51,6 +52,11 @@ public class QuadPlots extends PluginBase {
 
         provider = new YAMLProvider();
         provider.init();
+
+        getServer().getPluginManager().registerEvents(new MovementListener(), this);
+        getServer().getPluginManager().registerEvents(new BlockListener(), this);
+        getServer().getPluginManager().registerEvents(new FormListener(), this);
+        getServer().getPluginManager().registerEvents(new PlayerListener(), this);
     }
 
     public void registerSubCommands() {
@@ -58,6 +64,8 @@ public class QuadPlots extends PluginBase {
         SubCommandHandler.register("border", new BorderCommand());
         SubCommandHandler.register("clear", new ClearCommand());
         SubCommandHandler.register("bypass", new BypassCommand());
+        SubCommandHandler.register("home", new HomeCommand());
+        SubCommandHandler.register("claim", new ClaimCommand());
     }
 
     public boolean isBypassing(String player) {
