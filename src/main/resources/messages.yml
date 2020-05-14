@@ -1,4 +1,4 @@
-prefix: "§6Quad§fPlots §8> §r"
+prefix: "§8» §6Quad§fPlots §8| §7"
 
 # Error Messages
 not-on-a-plot: "§cDu stehst gerade auf keinem Plot."
@@ -92,7 +92,7 @@ warped: "§aDu wurdest erfolgreich zum Plot ([0];[1]) teleportiert."
 
 # /p dispose
 disposed: "§aDu hast das Plot soeben freigegeben."
-dispose-confirm: "§eMöchtest du dieses Plot wirklich freigeben? wenn ja, führe /p dispose aus."
+dispose-confirm: "§eMöchtest du dieses Plot wirklich freigeben? wenn ja, führe /p dispose confirm aus."
 
 # plot movement
 plot-entered-claimed: "§a([0];[1]) Plot von [2]"

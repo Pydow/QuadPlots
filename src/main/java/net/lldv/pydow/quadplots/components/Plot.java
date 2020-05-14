@@ -49,6 +49,7 @@ public class Plot {
 
     public boolean isAllowedToEnter(String player) {
         if (owner.equalsIgnoreCase(player)) return true;
+        if (denied.contains("*")) return false;
         if (denied.contains(player)) return false;
         return true;
     }
