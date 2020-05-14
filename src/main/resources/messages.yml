@@ -90,6 +90,10 @@ help-helpers-members-content: "§lHelfer:§r\n\nHelfer sind Spieler die dir beim
 warp-number-error: "§cX und Z müssen eine Zahl sein."
 warped: "§aDu wurdest erfolgreich zum Plot ([0];[1]) teleportiert."
 
+# /p dispose
+disposed: "§aDu hast das Plot soeben freigegeben."
+dispose-confirm: "§eMöchtest du dieses Plot wirklich freigeben? wenn ja, führe /p dispose aus."
+
 # plot movement
 plot-entered-claimed: "§a([0];[1]) Plot von [2]"
 plot-entered-free: "§e([0];[1]) Freies Plot"
