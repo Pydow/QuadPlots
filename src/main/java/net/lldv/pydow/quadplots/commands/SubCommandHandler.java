@@ -1,9 +1,12 @@
 package net.lldv.pydow.quadplots.commands;
 
 import cn.nukkit.command.CommandSender;
+import cn.nukkit.command.data.CommandParameter;
 import net.lldv.pydow.quadplots.components.settings.Language;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class SubCommandHandler {
 

@@ -13,7 +13,7 @@ public class ClaimCommand extends SubCommand {
 
 
     public ClaimCommand() {
-        super("claim", "/p claim", new String[]{}, "claim", false);
+        super("claim", "/p claim", new String[]{"c"}, "claim", false);
     }
 
     @Override

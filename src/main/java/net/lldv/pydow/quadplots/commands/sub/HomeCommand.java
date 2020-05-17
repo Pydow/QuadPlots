@@ -64,7 +64,7 @@ public class HomeCommand extends SubCommand {
 
 
             } else {
-                if (otherPlayer) sender.sendMessage(Language.getAndReplace("no-plots-other"));
+                if (otherPlayer) sender.sendMessage(Language.getAndReplace("no-plots-other", target));
                 if (!otherPlayer) sender.sendMessage(Language.get("no-plots"));
             }
         }

@@ -42,15 +42,15 @@ public class QuadPlots extends PluginBase {
         PlotSettings.load();
         Language.init();
         getServer().getGeneratorRegistry().register(id, new QuadPlotGen(), 0);
+        registerSubCommands();
         CommandRegistry cr = getServer().getCommandRegistry();
-        cr.register(this, "plot", new PlotCommand());
+        cr.register(this, new PlotCommand(this));
     }
 
     @Override
     public void onEnable() {
         saveDefaultConfig();
 
-        registerSubCommands();
         registerHelpPages();
 
         provider = new YAMLProvider();
