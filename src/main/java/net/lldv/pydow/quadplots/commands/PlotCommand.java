@@ -9,7 +9,6 @@ import net.lldv.pydow.quadplots.components.tools.Command;
 
 public class PlotCommand extends PluginCommand<QuadPlots> {
 
-
     public PlotCommand(QuadPlots owner) {
         super(owner, Command.create("plot", "Plot Command",
                 new String[]{},
@@ -32,6 +31,5 @@ public class PlotCommand extends PluginCommand<QuadPlots> {
         SubCommandHandler.handle(sender, s, args);
         return false;
     }
-
 
 }
