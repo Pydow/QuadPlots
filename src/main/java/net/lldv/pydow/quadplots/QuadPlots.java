@@ -147,10 +147,8 @@ public class QuadPlots extends PluginBase {
         double $difX;
         double $difZ;
 
-        // ToDo: level check!!
-        //String levelName = position.getLevel().getName();
-        //if (!levelName.equalsIgnoreCase(PlotSettings.world)) return new PlotCallback(null, CallbackIDs.ON_ROAD);
-
+        String levelName = position.getLevel().getName();
+        if (!levelName.equalsIgnoreCase(PlotSettings.world)) return new PlotCallback(null, CallbackIDs.ON_ROAD);
 
         int plotSize = PlotSettings.plotSize;
         int roadWidth = PlotSettings.roadWidth;
