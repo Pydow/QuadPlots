@@ -7,6 +7,8 @@ player-not-found: "§cDer angegebene Spieler konnte nicht gefunden werden."
 not-your-plot: "§cDieses Plot gehört dir nicht."
 command-not-found: "§cEs wurde kein Subcommand mit diesem Namen gefunden. Führe /p help aus, falls du Hilfe benötigst."
 max-plots: "§cDu hast bereits die maximale Anzahl an Plots geclaimt."
+no-plots: "§cDu hast noch kein Plot."
+no-plots-other: "§c[0] hat noch kein Plot."
 
 # /p info
 info-free: "§aDu befindest dich auf dem Plot ([0];[1]). Dieses Plot ist frei."
@@ -25,8 +27,6 @@ claimed: "§aDieses Plot gehört nun dir."
 
 # /p home
 id-needs-to-be-number: "§cDie ID muss eine Zahl sein."
-no-plots: "§cDu hast noch kein Plots."
-no-plots-other: "§c[0] hat noch kein Plot."
 no-plot-with-id: "§cDu hast kein Plot mit der ID [0]."
 no-plot-with-id-other: "§c[0] hat kein Plot mit der ID [1]."
 home-teleported: "§aDu wurdest zu deinem [0]. Plot teleportiert."
@@ -93,6 +93,10 @@ warped: "§aDu wurdest erfolgreich zum Plot ([0];[1]) teleportiert."
 # /p dispose
 disposed: "§aDu hast das Plot soeben freigegeben."
 dispose-confirm: "§eMöchtest du dieses Plot wirklich freigeben? wenn ja, führe /p dispose confirm aus."
+
+# /p list
+list-1: "§aPlots von [0]: [1]"
+
 
 # plot movement
 plot-entered-claimed: "§a([0];[1]) Plot von [2]"

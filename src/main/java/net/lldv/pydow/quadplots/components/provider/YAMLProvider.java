@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class YAMLProvider extends Provider {
 
@@ -171,11 +172,10 @@ public class YAMLProvider extends Provider {
 
     @Override
     public List<Plot> getPlotsOfPlayer(String name) {
-        List<Plot> plots = new ArrayList<>();
-        for (Plot plot : data.values()) {
-            if (plot.owner.equalsIgnoreCase(name)) plots.add(plot);
-        }
-        return plots;
+        return data.values()
+                .stream()
+                .filter(plot -> plot.owner.equalsIgnoreCase(name))
+                .collect(Collectors.toList());
     }
 
     @Override
